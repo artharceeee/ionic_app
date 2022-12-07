@@ -1,0 +1,53 @@
+<ion-toolbar id="miniPlayer"> <ion-item>
+
+<ion-thumbnail slot="start"
+
+(click)="maximize()"> <img src="{{currImage}}" /> </ion-thumbnail>
+
+<ion-label
+
+(click)="maximize()">
+
+<h2>{{currTitle}}</h2> <p>{{currSubtitle}}</p>
+
+</ion-label>
+
+<!-- Play Button -->
+
+<ion-button (click)="play()"
+
+mode="ios" fill="clear" *ngIf="!isPlaying">
+
+<ion-icon name="play"
+
+style="font-size: x-large;"></ion-icon>
+
+</ion-button>
+
+<!-- Pause Button -->
+
+<ion-button (click)="pause()"
+
+mode="ios" fill="clear"
+
+*ngIf="isPlaying">
+
+<ion-icon name="pause" style="font-size: x-large;"></ion-icon>
+
+</ion-button> <!-- Cancel Song Button -->
+
+<ion-button (click)="cancel()"
+
+mode="ios" fill="clear">
+
+<ion-icon name="close"
+
+style="font-size: x-large;"></ion-icon> </ion-button>
+
+</ion-item>
+
+<!-- Song Progress Bar -->
+
+<ion-progress-bar value=" {{progress}}"></ion-progress-bar>
+
+</ion-toolbar>
