@@ -1,0 +1,15 @@
+<ion-item lines="none" *ngFor="let
+
+song of songs"
+
+(click)="playSong (song.title, song.subti
+
+tle, song.img, song.path)"> <ion-thumbnail slot="start"> <img src="{{song.img}}" /> </ion-thumbnail>
+
+<ion-label> <h2>{{song.title}}</h2>
+
+<p>{{song.subtitle}}</p>
+
+</ion-label>
+
+</ion-item>
